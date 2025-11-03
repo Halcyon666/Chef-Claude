@@ -40,7 +40,8 @@ export async function getRecipeFromChefClaude(ingredientsArr: string[]) {
   });
 
   // index 0 is thinking block and 1 is the answer
-  return msg.content[1].text;
+  // Cast to any because ContentBlock type doesn't expose .text directly in the SDK types
+  return (msg.content[1] as any)?.text ?? "";
 }
 
 /**
