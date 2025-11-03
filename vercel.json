@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/Chef-Claude/(.*)", "destination": "/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
